@@ -1,9 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Logistics &mdash; Colorlib Website Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{{ asset('assets/javaexpedisi/relicon.png') }}" type="image/gif" sizes="16x16">
+    <!-- Primary Meta Tags -->
+    <title>Java Expedisi | Your Delivery Solution</title>
+    <meta name="title" content="Java Expedisi | Your Delivery Solution">
+    <meta name="description" content="Java Expedisi.
+    Melayani pengiriman barang, pengiriman paket express, pengiriman kendaraan, pindahan.
+    Melayani rute pengiriman seluruh Indonesia.
+    Kami pastikan kirimkan barang anda cepat serta aman sampai tujuan">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Java Expedisi | Your Delivery Solution">
+    <meta property="og:description" content="Java Expedisi.
+    Melayani pengiriman barang, pengiriman paket express, pengiriman kendaraan, pindahan.
+    Melayani rute pengiriman seluruh Indonesia.
+    Kami pastikan kirimkan barang anda cepat serta aman sampai tujuan">
+    <meta property="og:image" content="{{ asset('assets/javaexpedisi/metaicon.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Java Expedisi | Your Delivery Solution">
+    <meta property="twitter:description" content="Java Expedisi.
+    Melayani pengiriman barang, pengiriman paket express, pengiriman kendaraan, pindahan.
+    Melayani rute pengiriman seluruh Indonesia.
+    Kami pastikan kirimkan barang anda cepat serta aman sampai tujuan">
+    <meta property="twitter:image" content="{{ asset('assets/javaexpedisi/metaicon.png') }}">
+
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700"> 
     <link rel="stylesheet" href="{{ asset('assets/fonts/icomoon/style.css') }}">
@@ -44,15 +72,16 @@
       <div class="container">
         <div class="row align-items-center">
           
-          <div class="col-11 col-xl-2">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Logistics</a></h1>
+          <div class="col-11 col-xl-2 col-xs-12" style="margin: auto;">
+            {{-- <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Logistics</a></h1> --}}
+            <img src="{{ asset('assets/javaexpedisi/logo.png') }}" alt="" width="100%" height="auto">
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li class="active"><a href="{{ '/' }}">Home</a></li>
+                {{-- <li><a href="about.html">About Us</a></li>
                 <li class="has-children">
                   <a href="services.html">Services</a>
                   <ul class="dropdown">
@@ -65,13 +94,13 @@
                 </li>
                 <li><a href="industries.html">Industries</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li> --}}
               </ul>
             </nav>
           </div>
 
 
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+          <div class="d-none d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
 
           </div>
 
@@ -80,18 +109,13 @@
       
     </header>
 
-  
-
     <div class="site-blocks-cover overlay" style="background-image: url(assets/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
 
           <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-            
-
             <h1 class="text-white font-weight-light mb-5 text-uppercase font-weight-bold">Your Delivery Solution</h1>
-            <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Get Started!</a></p>
-
+            {{-- <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Get Started!</a></p> --}}
           </div>
         </div>
       </div>
@@ -111,21 +135,21 @@
         <div class="col-md-4">
           <div class="free-quote bg-dark h-100">
             <h2 class="my-4 heading  text-center">Shipping Rate</h2>
-            <form method="post">
-              <div class="form-group">
+            <form action="{{ asset('assets/javaexpedisi/published-rate-javaexpedisi-2022.xlsx') }}">
+              {{-- <div class="form-group">
                 <label for="fq_name">Origin</label>
                 <input type="text" class="form-control btn-block" id="fq_origin" name="fq_origin" placeholder="Enter Origin">
-                {{-- <select name="originSelect" id="originSelect" class="form-control btn-block">
+                <select name="originSelect" id="originSelect" class="form-control btn-block">
                   <option value="">Enter Origin</option>
                   <option value="0">Jakarta</option>
-                </select> --}}
-              </div>
-              <div class="form-group mb-4">
+                </select>
+              </div> --}}
+              {{-- <div class="form-group mb-4">
                 <label for="fq_email">Destination</label>
                 <input type="text" class="form-control btn-block" id="fq_destination" name="fq_destination" placeholder="Enter Destination">
-              </div>
+              </div> --}}
               <div class="form-group">
-                <input type="button" id="rateSubmit" class="btn btn-primary text-white py-2 px-4 btn-block" value="Get Rate">  
+                <input type="submit" class="btn btn-primary text-white py-2 px-4 btn-block" value="Get Rate">
               </div>
             </form>
             <h2 class="my-4 heading  text-center">Tracking</h2>
@@ -163,11 +187,11 @@
         <div class="row align-items-stretch">
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-travel"></span></div>
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-platform"></span></div>
               <div>
-                <h3>Air Freight</h3>
-                <p>Jasa pengiriman barang melalui jalur udara. Membuat barang anda menjadi lebih cepat sampai ke tujuan.</p>
-                <p class="mb-0"><a href="#">Learn More</a></p>
+                <h3>Express Package</h3>
+                <p>Jasa pengiriman barang express. Membuat barang anda menjadi lebih cepat sampai ke tujuan.</p>
+                {{-- <p class="mb-0"><a href="#">Learn More</a></p> --}}
               </div>
             </div>
           </div>
@@ -177,17 +201,17 @@
               <div>
                 <h3>Ocean Freight</h3>
                 <p>Jasa pengiriman barang melalui jalur laut. Cocok untuk melakukan pengiriman barang dengan kuantitas besar dengan harga ekonomis.</p>
-                <p class="mb-0"><a href="#">Learn More</a></p>
+                {{-- <p class="mb-0"><a href="#">Learn More</a></p> --}}
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-frontal-truck"></span></div>
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-car"></span></div>
               <div>
                 <h3>Ground Shipping</h3>
                 <p>Jasa pengiriman barang melalui jalur darat. Pilihan populer untuk pengiriman barang dengan kuantitas kecil dan harga yang ekonomis.</p>
-                <p class="mb-0"><a href="#">Learn More</a></p>
+                {{-- <p class="mb-0"><a href="#">Learn More</a></p> --}}
               </div>
             </div>
           </div>
@@ -196,28 +220,15 @@
       </div>
     </div>
   
-
     <div class="site-section block-13">
       <!-- <div class="container"></div> -->
-
-
       <div class="owl-carousel nonloop-block-13">
         <div>
           <a href="#" class="unit-1 text-center">
             <img src="assets/images/img_1.jpg" alt="Image" class="img-fluid">
             <div class="unit-1-text">
               <h3 class="unit-1-heading">Storage</h3>
-              <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
-            </div>
-          </a>
-        </div>
-
-        <div>
-          <a href="#" class="unit-1 text-center">
-            <img src="assets/images/img_2.jpg" alt="Image" class="img-fluid">
-            <div class="unit-1-text">
-              <h3 class="unit-1-heading">Air Transports</h3>
-              <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
+              <p class="px-5">-</p>
             </div>
           </a>
         </div>
@@ -227,7 +238,7 @@
             <img src="assets/images/img_3.jpg" alt="Image" class="img-fluid">
             <div class="unit-1-text">
               <h3 class="unit-1-heading">Cargo Transports</h3>
-              <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
+              <p class="px-5">-</p>
             </div>
           </a>
         </div>
@@ -237,7 +248,17 @@
             <img src="assets/images/img_4.jpg" alt="Image" class="img-fluid">
             <div class="unit-1-text">
               <h3 class="unit-1-heading">Cargo Ship</h3>
-              <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
+              <p class="px-5">-</p>
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" class="unit-1 text-center">
+            <img src="assets/images/img_1.jpg" alt="Image" class="img-fluid">
+            <div class="unit-1-text">
+              <h3 class="unit-1-heading">Storage</h3>
+              <p class="px-5">-</p>
             </div>
           </a>
         </div>
@@ -247,86 +268,70 @@
             <img src="assets/images/img_5.jpg" alt="Image" class="img-fluid">
             <div class="unit-1-text">
               <h3 class="unit-1-heading">Ware Housing</h3>
-              <p class="px-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos tempore ullam minus voluptate libero.</p>
+              <p class="px-5">-</p>
             </div>
           </a>
         </div>
-
-
       </div>
     </div>
-
-
-    
 
     <div class="site-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
             <h2 class="font-weight-light text-primary">More Services</h2>
-            <p class="color-black-opacity-5">We Offer The Following Services</p>
+            <p class="color-black-opacity-5">-</p>
           </div>
         </div>
         <div class="row align-items-stretch">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-travel"></span></div>
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-platform"></span></div>
               <div>
-                <h3>Air Air Freight</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
+                <h3>Express Package</h3>
+                <p>Jasa pengiriman barang express. Membuat barang anda menjadi lebih cepat sampai ke tujuan.</p>
+                {{-- <p class="mb-0"><a href="#">Learn More</a></p> --}}
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="unit-4 d-flex">
               <div class="unit-4-icon mr-4"><span class="text-primary flaticon-sea-ship-with-containers"></span></div>
               <div>
                 <h3>Ocean Freight</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
+                <p>Jasa pengiriman barang melalui jalur laut. Cocok untuk melakukan pengiriman barang dengan kuantitas besar dengan harga ekonomis.</p>
+                {{-- <p class="mb-0"><a href="#">Learn More</a></p> --}}
               </div>
             </div>
           </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-car"></span></div>
+              <div>
+                <h3>Ground Shipping</h3>
+                <p>Jasa pengiriman barang melalui jalur darat. Pilihan populer untuk pengiriman barang dengan kuantitas kecil dan harga yang ekonomis.</p>
+                {{-- <p class="mb-0"><a href="#">Learn More</a></p> --}}
+              </div>
+            </div>
+          </div>
+
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="unit-4 d-flex">
               <div class="unit-4-icon mr-4"><span class="text-primary flaticon-frontal-truck"></span></div>
               <div>
-                <h3>Ground Shipping</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
+                <h3>Towing</h3>
+                <p>Jasa pengiriman kendaraan bermotor. Pilihan untuk mengirimkan kendaraan anda dengan aman.</p>
+                {{-- <p><a href="#">Learn More</a></p> --}}
               </div>
             </div>
           </div>
-
-
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
             <div class="unit-4 d-flex">
               <div class="unit-4-icon mr-4"><span class="text-primary flaticon-barn"></span></div>
               <div>
-                <h3>Warehousing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-platform"></span></div>
-              <div>
-                <h3>Storage</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-car"></span></div>
-              <div>
-                <h3>Delivery Van</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                <p><a href="#">Learn More</a></p>
+                <h3>House Moving</h3>
+                <p>Jasa pindah rumah. Pilihan untuk proses pindahan anda jadi lebih mudah dan cepat.</p>
+                {{-- <p><a href="#">Learn More</a></p> --}}
               </div>
             </div>
           </div>
@@ -340,15 +345,80 @@
         <div class="row align-items-center justify-content-center text-center">
 
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="400">
-            <a href="https://vimeo.com/channels/staffpicks/93951774" class="play-single-big mb-4 d-inline-block popup-vimeo"><span class="icon-play"></span></a>
-            <h2 class="text-white font-weight-light mb-5 h1">View Our Services By Watching This Short Video</h2>
-            
+            <h2 class="text-white font-weight-light mb-5 h1">Open Mitra Expedisi untuk Agan2 yang mau buka usaha Expedisi.</h2>
+            <p class="mb-0"><a href="https://wa.me/6285335149955?text=Halo, saya ingin bergabung dengan Java Expedisi sebagai mitra agen" class="btn btn-primary py-3 px-5 text-white">Hubungi Kami</a></p>
           </div>
         </div>
       </div>
-    </div>  
+    </div>
+
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center border-primary">
+            <h2 class="font-weight-light text-primary">Offices</h2>
+            <p class="color-black-opacity-5">-</p>
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-barn"></span></div>
+              <div>
+                <h3>Surabaya</h3>
+                <p>JL.Jemursari XI E62 NO.15 Surabaya.</p>
+                <p><a href="#"><i class="icon-whatsapp"></i> 0853-3514-9955</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-barn"></span></div>
+              <div>
+                <h3>Balikpapan</h3>
+                <p>JL. Arjuna Inpres IV No. 32 Balikpapan Utara.</p>
+                <p><a href="#"><i class="icon-whatsapp"></i> 0812-5521-0060</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-barn"></span></div>
+              <div>
+                <h3>Gresik</h3>
+                <p>JL.Raya Cangkir KM 21. Desa Cangkir Wates ( Kedai Raya ) RT 9 RW 02 Driyorejo Gresik.</p>
+                <p><a href="#"><i class="icon-whatsapp"></i> 0856-3063-393</a></p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-barn"></span></div>
+              <div>
+                <h3>Sidoarjo</h3>
+                <p>Perumahan Putri Juanda B11 No.9 Sidoarjo.</p>
+                <p><a href="#"><i class="icon-whatsapp"></i> 0821-4264-2971</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary flaticon-barn"></span></div>
+              <div>
+                <h3>Sulawesi Tenggara</h3>
+                <p>Desa Lamara Dsn. 4 Kecamatan Benua Kab. Konsel Sulawesi Tenggara.</p>
+                <p><a href="#"><i class="icon-whatsapp"></i> 0852-5608-4341</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
     
-    <div class="site-section border-bottom">
+    {{-- <div class="site-section border-bottom">
       <div class="container">
 
         <div class="row justify-content-center mb-5">
@@ -407,9 +477,9 @@
 
         </div>
       </div>
-    </div>
+    </div> --}}
 
-    <div class="site-section">
+    {{-- <div class="site-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
@@ -436,9 +506,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     
-    <div class="site-section border-top">
+    {{-- <div class="site-section border-top">
       <div class="container">
         <div class="row text-center">
           <div class="col-md-12">
@@ -447,23 +517,34 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     
     <footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-9">
             <div class="row">
-              <div class="col-md-3">
-                <h2 class="footer-heading mb-4">Quick Links</h2>
+              <div class="col-md-4">
+                <h2 class="footer-heading mb-4">Offices</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li>
+                    <a href="#">Surabaya</a>
+                  </li>
+                  <li>
+                    <a href="#">Balikpapan</a>
+                  </li>
+                  <li>
+                    <a href="#">Gresik</a>
+                  </li>
+                  <li>
+                    <a href="#">Sidoarjo</a>
+                  </li>
+                  <li>
+                    <a href="#">Sulawesi Tenggara</a>
+                  </li>
                 </ul>
               </div>
-              <div class="col-md-3">
+              {{-- <div class="col-md-3">
                 <h2 class="footer-heading mb-4">Products</h2>
                 <ul class="list-unstyled">
                   <li><a href="#">About Us</a></li>
@@ -471,8 +552,8 @@
                   <li><a href="#">Testimonials</a></li>
                   <li><a href="#">Contact Us</a></li>
                 </ul>
-              </div>
-              <div class="col-md-3">
+              </div> --}}
+              {{-- <div class="col-md-4">
                 <h2 class="footer-heading mb-4">Features</h2>
                 <ul class="list-unstyled">
                   <li><a href="#">About Us</a></li>
@@ -480,18 +561,18 @@
                   <li><a href="#">Testimonials</a></li>
                   <li><a href="#">Contact Us</a></li>
                 </ul>
-              </div>
-              <div class="col-md-3">
+              </div> --}}
+              {{-- <div class="col-md-3">
                 <h2 class="footer-heading mb-4">Follow Us</h2>
                 <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-              </div>
+              </div> --}}
             </div>
           </div>
           <div class="col-md-3">
-            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+            {{-- <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
             <form action="#" method="post">
               <div class="input-group mb-3">
                 <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
@@ -499,7 +580,12 @@
                   <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
                 </div>
               </div>
-            </form>
+            </form> --}}
+            <h2 class="footer-heading mb-4">Follow Us</h2>
+            <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+            <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
           </div>
         </div>
         <div class="row pt-5 mt-5 text-center">
@@ -507,7 +593,7 @@
             <div class="border-top pt-5">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | javaexpedisi.com | Powered <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             </div>
@@ -536,14 +622,14 @@
     // In your Javascript (external .js resource or <script> tag)
     $(document).ready(function() {
         $("#rateSubmit").on('click', function(){
-          let phone = '6285607755527'
+          let phone = '6285335149955'
           let origin = $("#fq_origin").val()
           let destination = $("#fq_destination").val()
           window.open('https://wa.me/'+phone+'?text=Halo, saya ingin menanyakan ongkos kirim dari '+origin+' ke '+destination)
         })
 
         $("#trackingSubmit").on('click', function(){
-          let phone = '6285607755527'
+          let phone = '6285335149955'
           let shippingCode = $("#fq_shippingCode").val()
           window.open('https://wa.me/'+phone+'?text=Halo, saya ingin menanyakan status dan lokasi pengiriman saya dengan nomor tracking '+shippingCode)
         })
