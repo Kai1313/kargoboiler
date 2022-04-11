@@ -135,7 +135,7 @@
         <div class="col-md-4">
           <div class="free-quote bg-dark h-100">
             <h2 class="my-4 heading  text-center">Shipping Rate</h2>
-            <form action="{{ asset('assets/javaexpedisi/published-rate-javaexpedisi-2022.xlsx') }}">
+            <form action="{{ asset('assets/javaexpedisi/published-rate-javaexpedisi-2022.pdf') }}">
               {{-- <div class="form-group">
                 <label for="fq_name">Origin</label>
                 <input type="text" class="form-control btn-block" id="fq_origin" name="fq_origin" placeholder="Enter Origin">
@@ -366,7 +366,7 @@
               <div class="unit-4-icon mr-4"><span class="text-primary flaticon-barn"></span></div>
               <div>
                 <h3>Surabaya</h3>
-                <p>JL.Jemursari XI E62 NO.15 Surabaya.</p>
+                <p>JL. Sidosermo VI No. 67 Surabaya.</p>
                 <p><a href="#"><i class="icon-whatsapp"></i> 0853-3514-9955</a></p>
               </div>
             </div>
